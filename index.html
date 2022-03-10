@@ -1,0 +1,28 @@
+{% load static %}
+
+<button id='write-about-puppy-btn'>compose puppy blast</button>
+<button id='view-all-puppies-btn'>view all puppies</button>
+
+<hr>
+
+<div id="share-puppy-view">
+  <h3>Share a Great Puppy</h3>
+  <form id="share-puppy">
+      <div class="form-group">
+          Puppy Owner: <input disabled class="form-control" value="Chris">
+      </div>
+      <div class="form-group">
+          <input class="form-control" id="share-puppy-name" placeholder="Puppy Name">
+      </div>
+      <textarea class="form-control" id="share-puppy-description" placeholder="Puppy Description"></textarea>
+      <input type="submit" class="btn btn-primary"/>
+  </form>
+</div>
+
+
+<div id="see-all-puppies">
+</div>
+
+{% block script %}
+    <script src="{% static 'dogSpace/edit.js' %}"></script>
+{% endblock %}
